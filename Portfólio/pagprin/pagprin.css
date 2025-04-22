@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --primaria: #025951;
+    --secundaria: #02735E;
+    --escuro: #034159; 
+    --maisescuro: #292929;
+    --claro: hsl(145, 100%, 98%);
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: rgba(1, 19, 20, 0.945);
+    color: var(--claro);
+}
+
+.botao{
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 35px;
+    background: linear-gradient(
+        270deg,
+    #07c4a2 10%,
+    #03695f 100%);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    text-wrap: nowrap;
+    border: none;
+}
+
+.botao:hover{
+    transform: scale(1.2)
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 24, 26, 0.945);   
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem;
+    box-shadow: solid 0 0 20px rgba(255, 255, 255, 0.1); 
+}
+
+.menu{
+    justify-content:center;
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 130%;
+}
+
+.navbarlink{
+    text-decoration:none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5s 0;
+   
+}
+
+.navbarlink:after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria),var(--secundaria) );
+    transition: width 0.5s ease;
+
+}
+
+.navbarlink:hover::after{
+    width: 100%;
+
+}
+
+.fotoperfil img{
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--secundaria);
+    transition: 0.4s ease-in-out;
+
+}
+
+.fotoperfil img:hover{
+    box-shadow: 0 0 25px var(--secundaria),
+                0 0 50px var(--secundaria),
+                0 0 100px var(--secundaria); 
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 5rem;
+    margin-top: -70px;
+}
+
+.inicio-b{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+}
+.inicio-b h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 24px;
+    line-height: 1;
+    text-align:center;
+}
+
+span{
+    background: linear-gradient(
+        #07c4a2 10%,
+        #03695f 100%
+    );
+    background-clip: text;
+    color: transparent;
+
+}
+
+section{
+    min-height: 500px;
+    padding: 15% 15% 5% 15%;
+
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.midia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.midia a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 25px;
+    background: transparent;
+    border: 2px solid var(--primaria);
+    color: var(--escuro);
+    border-radius:50% ;
+    margin: 10px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.midia a:hover{
+    color: var(--secundaria);
+    background-color: rgba(1, 19, 20, 0.945);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--secundaria);
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.fotoprin img{
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--secundaria);
+    transition: 0.5s ease-in-out;
+    margin-top: -100%;
+}
+
+.fotoprin img:hover{
+    box-shadow: 0 0 25px var(--secundaria),
+    0 0 50px var(--secundaria),
+    0 0 100px var(--secundaria); 
+
+}
+
+.fotos-extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.fotos-extra img {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--secundaria);
+    transition: 0.4s ease-in-out;
+    object-fit: cover;
+}
+
+.fotos-extra img:hover {
+    box-shadow: 0 0 15px var(--secundaria),
+                0 0 25px var(--secundaria);
+    transform: scale(1)translateY(-5px);
+}
